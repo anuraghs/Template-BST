@@ -1,8 +1,7 @@
-// intbst.cpp
-// Implements class IntBST
+
 // Anuragh Sundar, Erin DeLong (5/5/2021)
 
-//#include "intbst.h"
+
 
 #include <iostream>
 using std::cout;
@@ -143,12 +142,7 @@ int IntBST<T>::count(Node *n) const {
     return 1 + count(n->left)+ count(n->right);
 }
 
-// IMPLEMENT THIS FIRST: returns the node for a given value or NULL if none exists
-// Parameters:
-// int value: the value to be found
-// Node* n: the node to start with (for a recursive call)
-// Whenever you call this method from somewhere else, pass it
-// the root node as "n"
+
 
 
 // returns true if value is in the tree; false if not
@@ -267,7 +261,7 @@ bool IntBST<T>::remove(T value){
     while(current){
         if (current->info == value) {
             if (current->left == nullptr && current->right == nullptr) {
-                //Node* temp = current;
+                
                 if(current->parent == nullptr){ // checking if it is root
                     root = nullptr;
                 }
@@ -277,7 +271,7 @@ bool IntBST<T>::remove(T value){
                 else if (current == current->parent->right) {
                     current->parent->right = nullptr;
                 }
-                //delete temp;
+                
                 delete current;
                 return true;
             }
@@ -328,7 +322,7 @@ bool IntBST<T>::remove(T value){
                 current = current->right;
                 value = temp->info;
             }
-            //delete temp
+            
         }
         else if (current->info > value) {
             current = current->left;
