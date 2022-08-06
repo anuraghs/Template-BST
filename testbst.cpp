@@ -1,5 +1,4 @@
-// testbst.cpp
-// Tests intbst.cpp for CS 24 lab
+
 
 #include "bst.h"
 
@@ -122,8 +121,7 @@ int main() {
         cout << "  contains 16? " <<
             (bst2.contains(16) ? "Y" : "N") << endl;
 
-    // add tests for optional methods that you attempt to implement
-    // but don't do that until after submitting the basic version
+    
 
     return 0;
 }
